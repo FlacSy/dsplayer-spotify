@@ -47,6 +47,9 @@ class SpotifyPlugin(PluginInterface):
         self.debug_print(f"Updating settings: {settings}")
         self.settings.update(settings)
 
+    def get_plugin_type(self) -> str:
+        return "extractor"
+        
     async def search(self, data: str, engine: EngineInterface):
         self.debug_print(f"Searching with data: {data}")
         if "track" in data:
