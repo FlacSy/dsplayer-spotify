@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='dsplayer-spotify',  
-    version='1.1.0',
+    version='1.2.0',
     packages=find_packages(),
     install_requires=[
         'dsplayer',
@@ -11,7 +11,7 @@ setup(
     ],
     entry_points={
         'dsplayer.plugins': [
-            'youtube = plugin.plugin:SpotifyPlugin',
+            'spotify = dsplayer_spotify.spotify:SpotifyPlugin',
         ],
     },
 )
